@@ -53,5 +53,30 @@ schwartz = lightsaber"*
 
 goodguy = winnebago:drive:eagle5
 
-### 身份验证【24页】
+### 身份验证(Authentication)
 
+* Principals(身份)是subject的'identifying attributes(标识属性)'principals可以使任何能够证明subject的东西，但最好还是唯一的
+* Credentials(凭证)通常是只能被subject知道的秘密，作为一种起支持作用的证据，比如：密码、指纹、视网膜信息及证书等
+* principals/credential配对最常见的例子是用户名和密码。
+
+Authenticating Subject(验证Subjects)
+
+* 验证Subjects的过程，可以分解为三个不同的步骤：
+
+  1.收集subjects提交的Principals(身份)和Credentials(凭证)：
+
+  ​	UsernamePasswordToken token = new UsernamePasswordToken(username,password);
+
+  ​	token.setRememberMe(true);
+
+  2.提交Principals和credentials进行验证；
+
+  3.如果提交成功，则允许访问，否则重新进行身份验证或者阻止访问。
+
+### 授权(Authorization)
+
+### Apache Shiro Realms
+
+* Realm是一个能够访问应用程序特定的安全数据（如用户、角色及权限）的组件
+
+【49页】
